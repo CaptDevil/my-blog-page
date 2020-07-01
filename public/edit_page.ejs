@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/website-icon.png">
+    <title>Blog Editing Page</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Blog Edit</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center" style="border-radius: 0;">
+        <div class="container">
+            <h1 class="text-dark display-4">Edit Your Blog Post</h1>
+        </div>
+    </div>
+
+    <div class="container mb-4 mt-4">
+        <form class="form-group" action="/edit/update" method="POST">
+            <input type="submit" value="Update" class="float-right btn btn-primary text-center">
+            <div class="clearfix"></div>
+            <div class="input-group input-group mt-4">
+                <input class="form-control text-bold" type="text" name="id" value="<%=result[0].id%>" aria-hidden="false">
+            </div>
+            <div class="input-group input-group-lg mt-4">
+                <input class="form-control text-bold" type="text" name="title" value="<%=result[0].title%>">
+            </div>
+            <div class="input-group mb-4">
+                <textarea class="form-control bg-light text-dark mt-4" name="body" value="<%=result[0].title%>" style="height: 200px;"></textarea>
+            </div>
+        </form>
+    </div>
+
+    <div class="jumbotron bg-dark mt-4" style="border-radius: 0; margin-bottom: 0;">
+        <div class="container">
+            <div class="float-left">
+                <h4 class="text-info mb-3">Contact Me At</h4>
+                <a target="_blank" href="https://www.facebook.com/prabhudutta.sarangi.9" class="btn btn-outline-light btn-lg mr-3"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://www.instagram.com/the_captain_devil/" class="btn btn-outline-light btn-lg mr-3"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://twitter.com/prabhusarangi89" class="btn btn-outline-light btn-lg mr-3"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+            <div class="float-right">
+                <blockquote class="blockquote text-light text-right font-italic"><div>Ash nazg durbatulûk, ash nazg gimbatul,</div><div>ash nazg thrakatulûk, agh burzum-ishi krimpatul.</div></blockquote>
+                <footer class="blockquote-footer text-right text-light font-italic">Gandalf The Grey</footer>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

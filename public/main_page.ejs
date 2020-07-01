@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/website-icon.png">
+    <title>Blog Profile Page</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Blog Edit</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/addpostpage">Add a Post</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center" style="border-radius: 0;">
+        <div class="container">
+            <h1 class="text-dark display-4">Welcome To Your Blog Profile Page</h1>
+            <p>Edit, Add and Delete your Blog Posts from here.</p>
+        </div>
+    </div>
+
+    <div class="container mb-4 mt-4">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <th class="font-weight-normal text-center">Title</th>
+                <th class="font-weight-normal text-center">Date</th>
+                <th class="font-weight-normal text-center">Body</th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody>
+                <% for(let i=0;i<(results.length);i++){ %>
+                    <tr>
+                        <td class="text-center font-weight-light"><%=results[i].title%></td>
+                        <td class="text-center font-weight-light"><%=results[i].time%></td>
+                        <td class="text-center font-weight-light"><%=results[i].body%></td>
+                        <td class="text-center font-weight-light"><% let link = '/edit/'+results[i].id %><a href="<%= link %>" class="btn btn-outline-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                        <td class="text-center font-weight-light"><% let link1 = '/delete/'+results[i].id %><a href="<%= link1 %>" class="btn btn-outline-primary"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="jumbotron bg-dark mt-4" style="border-radius: 0; margin-bottom: 0;">
+        <div class="container">
+            <div class="float-left">
+                <h4 class="text-info mb-3">Contact Me At</h4>
+                <a href="https://www.facebook.com/prabhudutta.sarangi.9" class="btn btn-outline-light btn-lg mr-3"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/the_captain_devil/" class="btn btn-outline-light btn-lg mr-3"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/prabhusarangi89" class="btn btn-outline-light btn-lg mr-3"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+            <div class="float-right">
+                <blockquote class="blockquote text-light text-right font-italic"><div>Ash nazg durbatulûk, ash nazg gimbatul,</div><div>ash nazg thrakatulûk, agh burzum-ishi krimpatul.</div></blockquote>
+                <footer class="blockquote-footer text-right text-light font-italic">Gandalf The Grey</footer>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

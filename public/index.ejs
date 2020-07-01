@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./images/website-icon.png">
+    <title>Prabhudatta's Blog</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Blog Posts</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center" style="border-radius: 0;">
+        <div class="container">
+            <h1 class="display-3">Welcome to My Blog Website</h1>
+            <p>This page contains all my weekly thoughts.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <% for(let i=0;i<(results.length);i++){ %>
+            <div class="card">
+                <div class="card-header bg-info">
+                    <h3 class="card-title" style="margin: 0;"><%=results[i].title%></h3>
+                </div>
+                <div class="card-body">
+                    <p class="font-weight-lighter"><%=results[i].time%></p>
+                    <p><%=results[i].body%></p>
+                </div>
+            </div>
+            <hr>
+        <% } %>
+    </div>
+
+    <div class="jumbotron bg-dark mt-4" style="margin: 0; border-radius: 0;">
+        <div class="container">
+            <div class="float-left">
+                <h4 class="text-info mb-3">Contact Me At</h4>
+                <a href="https://www.facebook.com/prabhudutta.sarangi.9" class="btn btn-outline-light btn-lg mr-3"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/the_captain_devil/" class="btn btn-outline-light btn-lg mr-3"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/prabhusarangi89" class="btn btn-outline-light btn-lg mr-3"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+            <div class="float-right">
+                <blockquote class="blockquote text-light text-right font-italic"><div>Ash nazg durbatulûk, ash nazg gimbatul,</div><div>ash nazg thrakatulûk, agh burzum-ishi krimpatul.</div></blockquote>
+                <footer class="blockquote-footer text-right text-light font-italic">Gandalf The Grey</footer>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
